@@ -1,0 +1,10 @@
+Chapter 1: Core JavaScript
+	kiểu dữ liệu:
+		Undefind: có nghĩa là ko xác định. Trong js, khi bạn khai báo một biến 
+		nhưng chưa gán giá trị cho nó, giá trị của biến đó sẽ là underfind
+		
+		Null: có nghĩa là giá trị rỗng hoặc giá trị không tồn tại, nó có thể được sử dụng để gán cho
+		một biến như là một đại diện không có giá trị. Kiểu Object
+		
+		
+		
