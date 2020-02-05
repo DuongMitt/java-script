@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //document.writeln('hello world');
+        // var then = new Date(2020, 0, 1);
+        // var later = new Date(2020, 0, 2, 17, 10, 30);
+        // var now = new Date();
+        // var alapsed = now - then;
+        // document.write(alapsed.getFullYear());
+        // document.write(alapsed.getUTCHours());
+
+        // bien
+
+        //Object 
+        // var person = {
+        //     firstName: 'Hoang',
+        //     lastName: 'Pham',
+        //     showName: function () {
+        //         console.log(this.firstName + ' ' + this.lastName);
+        //     }
+        // };
+
+        // //cách 2: Object constructor
+        // var psn = new Object();
+        // psn.firstName = 'Hoang';
+        // psn.lastName = 'Pham';
+        // psn.showName = function () {
+        //     console.log(this.firstName + ' ' + this.lastName);
+        // };
+
+        // // cách 3: Constructor pattern
+        function Person(firstName, lastName) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.showName = function () {
+                console.log(this.firstName + ' ' + this.lastName);
+            };
+        }
+
+        //delete Person.lastName; //xoa truong lastName
+        //Person.lName='Just adding';// them truong lName
+
+        var psn1 = new Person('Hoang', 'Pham');
+
+        //Serialize sẽ làm mất method, chỉ giữ các prototype 
+        JSON.stringify(psn1); //
+        var jsonString = '{"firstName":"Hoang","lastName":"Pham"}';
+        var psn = JSON.parse(jsonString); // Chuyển string thành object
+        console.log(psn.firstName); // Hoang
+        console.log(psn.lastName); // Pham
+        // var psn2 = new Person('Hoang', 'Nguyen');
+        for (var person in psn) {
+            console.log(person);
+        }
+
+
+        // cách 4: dùng prototype 
+        // function Person() {}
+        //     Person.prototype.firstName = 'Hoang';
+        //     Person.prototype.lastName = 'Pham';
+        //     Person.prototype.showName = function () {
+        //         console.log(this.firstName + ' ' + this.lastName);
+        //     };
+
+        // // Object được tạo sẽ có sẵn các trường firstName, lastName
+        // // và hàm showName
+        // var psn1 = new Person();
+        // console.log(psn1.firstName); //Hoang
+        // psn1.showName(); //Hoang Pham
+        // psn1['showName'](); //Hoang Pham
+
+    </script>
+</body>
+
+</html>

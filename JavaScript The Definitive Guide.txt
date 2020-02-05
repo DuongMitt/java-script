@@ -1,10 +1,136 @@
+Tôi đi code dạo học lập trình JS trong 15 phút
+	1. JS là gì, tại sao nên học
+		là một ngôn ngữ lập trình dùng nhiều ở phía front-end: một số tính năng 
+như in ra, hiển thị dữ liệu, đọc dữ liệu từ phía người dùng mà ko cần phía server
+
+	2. Hello wolrd
+		
+	3. Variable, datatype in JS
+		các biến js được lưu trữ trong bộ nhớ của browser process (tiến trình duyệt), 
+			hiểu một cách nôn na là biến được luue trong phần Ram mà trình suyệt đang sử dụng
+			
+			DECLAVE:
+				const: được sử dụng để khai báo 1 hằng số, và giá trị của nó khoang thay đổi trong suốt chuong trình
+				let: khai báo biến chit có thể truy cập được trong block bao quanh nó
+					được xác định bằng cặp {}
+				var: khai báo biến có thể truy cập ở phạm vi hàm số hoặc bên ngoài hàm số, toàn cục
+			Type:
+				theo tiêu chuẩn của ECMAScript xác định bảy keeir dữ liệu như sau:
+					boolean
+					null
+					underfinded
+					số 
+					chuỗi
+					symbol (mới trong ECMAScript 6)
+					kiểu đối tượng
+			
+		
+	4. Operator (Toán tử)
+		
+	5. Object (đối tượng) trong JS
+		1. cách khai báo Object
+			//Cách 1: Object literal 
+			//khai báo toàn bộ các trường và hàm
+			var person ={
+				firstName: 'Hoang',
+				lastName: 'Pham',
+				showName: function(){
+					console.log(this.firstName+' ' +this.lastName);
+				}
+			};
+			 //cách 2: Object constructor
+			var psn = new Object();
+				psn.firstName= 'Hoang';
+				psn.lastName = 'Pham';
+				psn.showName = function () {
+				console.log(this.firstName+' '+this.lastName);
+			};
+
+			// cách 3: Constructor pattern
+			function Person(firstName, lastName) {
+				this.firstName= firstName;
+				this.lastName = lastName;
+				this.showName = function () {
+                console.log(this.firstName+' '+this.lastName);
+				};
+			}
+			var psn1 = new Person('Hoang', 'Pham');
+			
+			//cách 4: dùng prototype 
+			function Person() {}
+			Person.prototype.firstName = 'Hoang';
+            Person.prototype.lastName = 'Pham';
+            Person.prototype.showName = function () {
+                console.log(this.firstName + ' ' + this.lastName);
+            };
+        
+        // Object được tạo sẽ có sẵn các trường firstName, lastName
+        // và hàm showName
+        var psn1 = new Person();
+       
+			
+		
+		2. để truy xuất một trường/hàm của object 
+			 ta có thể dùng dấu . (dot notation) và dấu [] (bracket notation)
+				console.log(psn1.firstName); //Hoang
+				psn1.showName(); //Hoang Pham
+				psn1['showName'](); //Hoang Pham
+		
+		3. Thêm/ Xóa một trường/ hàm của object
+			js là ngôn ngữ dynamic typing, ta có thể dễ dàng thêm/ xóa các trường trong code
+			
+			delete Person.lastName; //xoa truong lastName
+			Person.lName='Just adding';// them truong lName
+		
+		4. Serialize và deserialize
+			để giao tiếp vs server, JS thường submit dữ liệu dưới dạng pair-value (thông qua form) or
+			JSON. do đó, js hỗ trợ sẵn sàn việc chuyển Object sang chuỗi JSON và ngược lại
+				
+				//Serialize sẽ làm mất method, chỉ giữ các prototype 
+				JSON.stringify(psn1); //
+					var jsonString = '{"firstName":"Hoang","lastName":"Pham"}';
+					var psn = JSON.parse(jsonString); // Chuyển string thành object
+					console.log(psn.firstName); // Hoang
+					console.log(psn.lastName); // Pham
+				// var psn2 = new Person('Hoang', 'Nguyen');
+		5. Từ khóa this
+			dùng để trỏ tới chính Object gọi hàm đó. 
+		
+	6. String(chuỗi)- Object đặc biệt
+		
+	7. Array (Mảng)
+		
+	8. Control Statement (câu lệnh điều khiển)- if/else; switch-case
+		
+	9. Loop for, for-of, while
+		
+	10. Function 
+		
+	11. Advandce
+		DOM manipulation, event, callback, AJAX callback
+		NODEJS: require, async io, node  package, npm
+		ES6
+			role function, sync-wait,...
+
+	12. Serialize và deserialize
+		
+
+
+
 Chapter 1: Core JavaScript
-	kiểu dữ liệu:
+	1. kiểu dữ liệu:
 		Undefind: có nghĩa là ko xác định. Trong js, khi bạn khai báo một biến 
 		nhưng chưa gán giá trị cho nó, giá trị của biến đó sẽ là underfind
 		
 		Null: có nghĩa là giá trị rỗng hoặc giá trị không tồn tại, nó có thể được sử dụng để gán cho
 		một biến như là một đại diện không có giá trị. Kiểu Object
 		
+	
+Chapter 3: Type, Value, and Variable:
+			
+
 		
+		
+		
+	
 		
